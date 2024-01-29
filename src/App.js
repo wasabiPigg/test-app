@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import { Header } from './components/Header';
+import { EditTemplate } from './components/organisms/EditTemplate';
+import { ImportImageForm } from './components/organisms/ImportImageForm';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Reactを勉強しよう
-        </a>
-      </header>
+      <Header />
+      <ImportImageForm />
+      <EditTemplate />
     </div>
   );
 }
