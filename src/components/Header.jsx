@@ -30,7 +30,7 @@ export const Header = () => {
         <header className="App-header" style={headerStyle}>
         <div style={headerBoxStyle}>
               <div>
-                  コーデ加工ツール <i data-bs-toggle="modal" data-bs-target="#infoModalCenter" class="fas fa-question-circle"
+                  コーデ加工ツール <i data-bs-toggle="modal" data-bs-target="#infoModalCenter" className="fas fa-question-circle"
                   style={{color: "#707070"}}>
                   </i>
                   <FaQuestionCircle style={{color: "#707070"}} />
@@ -38,7 +38,7 @@ export const Header = () => {
               <div>
                 {/* TODO: createPng()を用意 */}
                   <Button type="button" className="btn" id="chgImgBtn" data-bs-toggle="modal"
-                  data-bs-target="#completeModalCenter" onclick="createPng()" style={createPngBtnStyle}>
+                  data-bs-target="#completeModalCenter" style={createPngBtnStyle}>
                   編集完了
               </Button>
               </div>

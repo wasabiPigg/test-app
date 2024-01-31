@@ -3,15 +3,15 @@ const style = {
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     objectFit: "cover",
-    width: "80px",
-    height: "80px"
+    width: "60px",
+    height: "60px"
 }
 
 export const ImportImageButton = (props) => {
     const { src } = props;
     return (
         <label className='importImage'>
-            <img id="" class="rounded" alt="" src={ src } style={style}></img>
+            <img id="" className="rounded" alt="" src={ src } style={style}></img>
             <input type="file" style={{display: "none"}}></input>
         </label>
     )

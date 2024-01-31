@@ -4,15 +4,15 @@ import Card from 'react-bootstrap/Card';
 const selectedStyle = {
     padding: 0,
     color: "var(--black-color)",
-    border: "none",
+    borderColor: "var(--gray-color)",
     backgroundColor: "var(--main-color-light-green)",
     fontWeight: "bold"
 }
 const notSelectedStyle = {
     padding: 0,
     color: "var(--black-color)",
-    border: "none",
-    backgroundColor: "var(--light-gray-color)",
+    borderColor: "var(--gray-color)",
+    backgroundColor: "white",
     fontWeight: "normal"
 }
 export const ImageCardButton = (props) => {

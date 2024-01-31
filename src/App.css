@@ -40,3 +40,43 @@
     transform: rotate(360deg);
   }
 }
+
+.accordion-button, .accordion-button:not(.collapsed) {
+  font-weight: normal;
+  padding: 0.5rem 1rem;
+  color: var(--black-color);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--main-color-light-green);
+}
+
+.accordion-body {
+  padding: 0;
+}
+
+
+.container {
+  margin-inline: auto;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.templateTable {
+  /* width: 500px; tableタグの親要素より広く */
+  border-spacing: 0.5rem;
+border-collapse: separate !important;
+}
+
+@media screen and (min-width: 768px) {
+  .importImage img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .imageArea {
+      width: 100% !important;
+      max-width: 600px !important;
+      max-height: 600px !important;
+  }
+}

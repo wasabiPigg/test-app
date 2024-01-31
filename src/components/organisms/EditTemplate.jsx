@@ -1,19 +1,15 @@
+import { Accordion, Container } from "react-bootstrap"
 import { ImageCardButton } from "../atoms/ImageCard"
 
-const ulStyle = {
-    listStyle: "none",
-    padding: 0,
-    display: "flex",
-    // eslint-disable-next-line no-dupe-keys
-    listStyle: "none",
-    justifyContent: "center"
-}
-const liStyle = {
-    padding: "0 3px",
+const thStyle = {
+    color: "#333",
+    fontSize: "16px",
+    width: "25%"
 }
 
+
 const templateList = [
-    {src:"https://raw.githubusercontent.com/wasabiPigg/outfitImgAutomation/master/img/temp0.png", title:"オリジナル"},
+    {src:"https://raw.githubusercontent.com/wasabiPigg/outfitImgAutomation/master/img/temp0.png", title:"シンプル"},
     {src:"https://pbs.twimg.com/media/F9xDMGYbkAA2ay5?format=jpg&name=large", title: "黒猫さん(仮)"},
     {src:"https://pbs.twimg.com/media/F-eOlWjbQAA5IBS?format=jpg&name=medium", title:"みやさん(仮)"}
 ]
@@ -22,13 +18,26 @@ export const EditTemplate = ( props ) => {
     const { selected } = props;
     return (
         <>
-            <ul className="text-center items horizontal-list" style={ulStyle}>
-                {templateList.map ((template, index) => (
-                    <li key={template} style={liStyle}>
-                    <ImageCardButton src = {template.src} title={template.title} selected={selected}/>
-                    </li>
-                ))}
-            </ul>
+        <Accordion defaultActiveKey="0" style={{maxWidth: "80vw", margin: "auto"}}>
+            <Accordion.Item eventKey="0">
+            <Accordion.Header>テンプレート<span style={{fontSize: "xx-small"}}>(タップで開閉します)</span></Accordion.Header>
+            <Accordion.Body>
+                <Container>
+                <table className="templateTable">
+                    <tbody>
+                        <tr>
+                            {templateList.map((template, index) => (
+                                <th key={index} style={thStyle} className="rounded">
+                                    <ImageCardButton src = {template.src} title={template.title} selected={selected}/>
+                                </th>
+                            ))}
+                        </tr>
+                    </tbody>
+                </table>
+                </Container>
+            </Accordion.Body>
+        </Accordion.Item>
+        </Accordion>
         </>
     )
 }
