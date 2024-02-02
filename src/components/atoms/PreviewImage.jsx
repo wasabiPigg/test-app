@@ -1,4 +1,4 @@
-const style = {
+const previewAreaStyle = {
     margin: "auto",
     width: "50%",
     maxWidth: "450px",
@@ -7,4 +7,16 @@ const style = {
     minHeight: "300px",
 }
 
-export const PreviewImage = () => <img id="previewArea" className="rounded mx-auto d-blockd imageArea" src="http://via.placeholder.com/900x900" style={style}></img>
+const cancasStyle = {
+    width: "900px",
+    height: "900px"
+}
+
+export const PreviewImage = () => {
+    return (
+        <>
+        {/* <img id="previewArea" className="rounded mx-auto d-blockd imageArea" src="http://via.placeholder.com/900x900" style={previewAreaStyle}></img> */}
+            <canvas style={cancasStyle} className="bg-img-transparent"></canvas>
+        </>
+    )
+}

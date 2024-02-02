@@ -1,6 +1,8 @@
 import './App.css';
 import { Header } from './components/Header';
 import { EditTemplate } from './components/organisms/EditTemplate';
+import { FooterMenuLarge } from './components/organisms/FooterMenuLarge';
+import { FooterMenuMedium } from './components/organisms/FooterMenuMedium';
 import { ImageArea } from './components/organisms/ImageArea';
 import { ImportImageForm } from './components/organisms/ImportImageForm';
 
@@ -11,6 +13,8 @@ function App() {
       <ImportImageForm />
       <EditTemplate />
       <ImageArea />
+      {/* <FooterMenuMedium /> */}
+      <FooterMenuLarge />
     </div>
   );
 }

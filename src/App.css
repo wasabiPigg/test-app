@@ -41,6 +41,11 @@
   }
 }
 
+.accordion {
+  width: fit-content;
+  max-width:  80vw;
+}
+
 .accordion-button, .accordion-button:not(.collapsed) {
   font-weight: normal;
   padding: 0.5rem 1rem;
@@ -68,6 +73,21 @@
 border-collapse: separate !important;
 }
 
+canvas {
+  margin: auto;
+  width: 50%;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.bg-img-transparent {
+  margin: 0;
+  background-position: 0px 0px, 8px 8px;
+  background-size: 16px 16px;
+  background-image: -webkit-linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc 100%),-webkit-linear-gradient(45deg, #ccc 25%, white 25%, white 75%, #ccc 75%, #eee 100%);
+  background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc 100%),linear-gradient(45deg, #ccc 25%, white 25%, white 75%, #ccc 75%, #ccc 100%);
+}
+
 @media screen and (min-width: 768px) {
   .importImage img {
     width: 80px !important;
@@ -78,5 +98,22 @@ border-collapse: separate !important;
       width: 100% !important;
       max-width: 600px !important;
       max-height: 600px !important;
+  }
+  canvas {
+      width: 100% ;
+      max-width: 600px ;
+      max-height: 600px ;
+  }
+
+  li a, .footerMenuMedium, .footerMenuLarge svg {
+    font-size: x-large !important;
+  }
+
+  .footerMenuMedium svg {
+    font-size: xx-large !important;
+  }
+
+  .footerMenuLarge span {
+    font-size: large !important;
   }
 }

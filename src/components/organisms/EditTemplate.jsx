@@ -3,8 +3,7 @@ import { ImageCardButton } from "../atoms/ImageCard"
 
 const thStyle = {
     color: "#333",
-    fontSize: "16px",
-    width: "25%"
+    fontSize: "16px"
 }
 
 
@@ -18,7 +17,7 @@ export const EditTemplate = ( props ) => {
     const { selected } = props;
     return (
         <>
-        <Accordion defaultActiveKey="0" style={{maxWidth: "80vw", margin: "auto"}}>
+        <Accordion defaultActiveKey="0" style={{margin: "auto"}}>
             <Accordion.Item eventKey="0">
             <Accordion.Header>テンプレート<span style={{fontSize: "xx-small"}}>(タップで開閉します)</span></Accordion.Header>
             <Accordion.Body>
