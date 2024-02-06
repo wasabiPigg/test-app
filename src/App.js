@@ -13,8 +13,8 @@ function App() {
       <ImportImageForm />
       <EditTemplate />
       <ImageArea />
-      {/* <FooterMenuMedium /> */}
-      <FooterMenuLarge />
+      <FooterMenuMedium />
+      {/* <FooterMenuLarge /> */}
     </div>
   );
 }
