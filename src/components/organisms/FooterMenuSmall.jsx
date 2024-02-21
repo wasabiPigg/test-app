@@ -9,15 +9,20 @@
     6: カレンダー
 */
 
+import { Form } from "react-bootstrap";
 import { ColorButton } from "../atoms/ColorButton";
 import { Select } from "../atoms/Select";
+import { Slider } from "../atoms/Slider";
+import { TextInput } from "../atoms/TextInput";
+import { Calendar } from "../atoms/DatePicker";
+import { memo } from "react";
 
 const colorBtnStyle = {
     marginTop: "0.5rem",
 }
 
-export const FooterMenuSmall = (props) => {
-    const { type, colorList=[], bgBtnIndex=-1, selectItems=[]} = props;
+export const FooterMenuSmall = memo((props) => {
+    const { type, colorList=[], bgBtnIndex=-1, selectItems=[], sliderLabel="", showTextToggle=false} = props;
     const menu = () => {
         switch (type) {
             case 0:
@@ -37,6 +42,24 @@ export const FooterMenuSmall = (props) => {
                     <Select selectItems={selectItems} />
                 </>
                 );
+            case 4:
+                return(
+                <>
+                    <Slider label={sliderLabel} />
+                </>
+                )
+            case 5:
+                return (
+                <>
+                    <TextInput showText={showTextToggle} />
+                </>
+                )
+            case 6:
+                return (
+                <>
+                    {/* <Calendar /> */}
+                </>
+                )
             default:
                 return(<></>);
         }
@@ -44,4 +67,4 @@ export const FooterMenuSmall = (props) => {
     return (
         <>{menu()}</>
     )
-}
+})

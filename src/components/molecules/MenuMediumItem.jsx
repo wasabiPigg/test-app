@@ -1,3 +1,4 @@
+/* eslint-disable no-dupe-keys */
 const menuMediumItem = [
     "アイテムaaaaaa1",
     "アイテムaaaaa2",

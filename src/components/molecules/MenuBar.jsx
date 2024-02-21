@@ -9,10 +9,13 @@ const divStyle = {
     padding: "0.3rem 0.5rem",
     fontWeight: "bold"
 }
-export const MenuBar = () => {
+export const MenuBar = (props) => {
+    const {onClickClose} = props;
     return (
         <div className="d-flex align-items-center footerMenuMedium" style={divStyle}>
-        <RiCloseLine style={{fontSize: "large"}}></RiCloseLine>
+        <button onClick={onClickClose} style={{border: "none", backgroundColor: "transparent", color: "white", paddingBottom: "0.3rem"}}>
+            <RiCloseLine style={{fontSize: "large"}}></RiCloseLine>
+        </button>
         <span style={spanStyle}>aiueo</span>
         </div>
     )

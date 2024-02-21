@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { MenuLargeItem } from "../molecules/MenuLargeItem"
 
 const style = {
@@ -8,10 +9,15 @@ const style = {
     zIndex: "1030"
 }
 
-export const FooterMenuLarge = () => {
+export const FooterMenuLarge = memo((props) => {
+    const {show} = props;
     return (
-        <div style={style}>
-        <MenuLargeItem />
-        </div>
+        <>
+        {show? (
+            <div style={style}>
+            <MenuLargeItem />
+            </div>
+        ) : null}
+        </>
     )
-}
+})
