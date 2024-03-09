@@ -1,4 +1,4 @@
-import { useFileDataSelector } from "stores/imageSrc"
+import { useAvatarImageSelector, useWearingImageSelector, useBackgroundImageSelector } from "stores/imageSrc"
 import React, { useEffect, useRef } from 'react';
 
 const previewAreaStyle = {
@@ -16,7 +16,11 @@ const cancasStyle = {
 }
 
 export const PreviewImage = () => {
-    const fileData = useFileDataSelector();
+
+    const avatarImage = useAvatarImageSelector();
+    const wearingImage = useWearingImageSelector();
+    const backgroundImage = useBackgroundImageSelector();
+
     const canvasRef = useRef(null);
 
     useEffect(() => {
@@ -24,14 +28,13 @@ export const PreviewImage = () => {
         canvas.width = 900;
         canvas.height = 900;
         const context = canvas.getContext('2d');
+        //TODO:それぞれの画像を任意の順番で描画する
         const image = new Image();
-        image.src = fileData;
+        image.src = avatarImage;
         image.onload = () => {
             context.drawImage(image, 0, 0, canvas.width, canvas.height);
-            context.font = '120px Roboto medium';
-            context.fillText('文字テスト', 0, 150);
         };
-    }, [fileData]);
+    }, [avatarImage, wearingImage, backgroundImage]);
 
     return (
         <>

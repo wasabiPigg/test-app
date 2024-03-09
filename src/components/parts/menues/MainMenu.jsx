@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { FaImage } from "react-icons/fa";
 import { IoTextSharp } from "react-icons/io5";
 import { BsShadows } from "react-icons/bs";
@@ -15,9 +15,6 @@ export const MainMenu = () => {
     const [isTextMenuShown, setTextMunuShown] = useState(false);
     const [isItemMenuShown, setItemMenuShown] = useState(false);
     const [isShadowMenuShown, setShadowMenuShown] = useState(false);
-
-    console.log(settingData)
-    console.log(settingData.backGround.editable)
 
     const wrapper = {
         position: "fixed",

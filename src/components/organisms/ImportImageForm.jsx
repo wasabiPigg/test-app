@@ -1,4 +1,7 @@
 import { ImportImageButton } from "../molecules/ImportImageButton"
+import { editAvatarImage, editWearingImage, editBackgroundImage } from 'stores/imageSrc';
+import { useDispatch } from 'react-redux';
+
 const ulStyle = {
     listStyle: "none",
     padding: 0,
@@ -10,22 +13,22 @@ const ulStyle = {
 const liStyle = {
     padding: "0 3px",
 }
-const srcList = [
-    "https://raw.githubusercontent.com/wasabiPigg/outfitImgAutomation/master/img/avBtnImg.PNG",
-    "https://raw.githubusercontent.com/wasabiPigg/outfitImgAutomation/master/img/clBtnImg.PNG",
-    "https://raw.githubusercontent.com/wasabiPigg/outfitImgAutomation/master/img/bgBtnImg.PNG"
-]
 
 export const ImportImageForm = () => {
-
+    const dispatch = useDispatch();
     return (
         <>
             <ul className="text-center items horizontal-list" style={ulStyle}>
-                {srcList.map ((importImg, index) => (
-                    <li key={importImg} style={liStyle}>
-                    <ImportImageButton src = {importImg}/>
-                    </li>
-                ))}
+                <li style={liStyle}>
+                    <ImportImageButton src="https://raw.githubusercontent.com/wasabiPigg/outfitImgAutomation/master/img/avBtnImg.PNG" editImage={(image) => dispatch(editAvatarImage(image))} />
+                </li>
+                <li style={liStyle}>
+                    <ImportImageButton src="https://raw.githubusercontent.com/wasabiPigg/outfitImgAutomation/master/img/clBtnImg.PNG" editImage={(image) => dispatch(editWearingImage(image))} />
+                </li>
+                <li style={liStyle}>
+                    <ImportImageButton src="https://raw.githubusercontent.com/wasabiPigg/outfitImgAutomation/master/img/bgBtnImg.PNG" editImage={(image) => dispatch(editBackgroundImage(image))} />
+                </li>
+
             </ul>
         </>
     )

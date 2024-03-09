@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { editFileData } from 'stores/imageSrc';
+
 
 const style = {
     backgroundColor: "rgb(214,215,218)",
@@ -13,16 +13,15 @@ const style = {
 export const ImportImageButton = (props) => {
     const dispatch = useDispatch();
 
-    const { src } = props;
+    const { src, editImage } = props;
     const handleImageChange = (event) => {
 
         const file = event.target.files[0];
-        console.log(file)
         if (file) {
             const reader = new FileReader();
             reader.onload = () => {
-                const fileData = reader.result;
-                dispatch(editFileData(fileData));
+                const image = reader.result;
+                editImage(image);
             };
             reader.readAsDataURL(file);
         }
