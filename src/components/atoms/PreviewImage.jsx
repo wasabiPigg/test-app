@@ -21,11 +21,15 @@ export const PreviewImage = () => {
 
     useEffect(() => {
         const canvas = canvasRef.current;
+        canvas.width = 900;
+        canvas.height = 900;
         const context = canvas.getContext('2d');
         const image = new Image();
         image.src = fileData;
         image.onload = () => {
             context.drawImage(image, 0, 0, canvas.width, canvas.height);
+            context.font = '120px Roboto medium';
+            context.fillText('文字テスト', 0, 150);
         };
     }, [fileData]);
 
