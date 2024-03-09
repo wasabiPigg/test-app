@@ -8,7 +8,7 @@ const thStyle = {
 
 
 const templateList = [
-    { src: "https://raw.githubusercontent.com/wasabiPigg/outfitImgAutomation/master/img/temp0.png", title: "シンプル", settingData: { backGround: { editable: true }, items: { editable: true }, shadows: { editable: true }, text: { editable: true } } },
+    { src: "https://raw.githubusercontent.com/wasabiPigg/outfitImgAutomation/master/img/temp0.png", title: "シンプル", settingData: { backGround: { editable: true }, items: { editable: true }, shadows: { editable: true }, text: { editable: false } } },
     { src: "https://pbs.twimg.com/media/F9xDMGYbkAA2ay5?format=jpg&name=large", title: "黒猫さん(仮)", settingData: { backGround: { editable: true }, items: { editable: false }, shadows: { editable: false }, text: { editable: true } } },
     { src: "https://pbs.twimg.com/media/F-eOlWjbQAA5IBS?format=jpg&name=medium", title: "みやさん(仮)", settingData: { backGround: { editable: true }, items: { editable: false }, shadows: { editable: false }, text: { editable: true } } }
 ]

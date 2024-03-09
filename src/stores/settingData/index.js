@@ -6,7 +6,7 @@ export const initialState = {
     settingData: {
         backGround: { editable: true },
         texts: { editable: true },
-        shdows: { editable: true },
+        shadows: { editable: true },
         items: { editable: true },
     }
 
