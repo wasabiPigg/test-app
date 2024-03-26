@@ -12,10 +12,17 @@ export const ImageSlice = createSlice({
     initialState,
     reducers: {
         initFileDate: () => initialState,
-        editFileData: (state, action) => {
-
-            state.image = action.payload
-
+        editAvatarImage: (state, action) => {
+            console.log("editAvatarImage")
+            state.avatarImage = action.payload
+        },
+        editWearingImage: (state, action) => {
+            console.log("editWearingImage")
+            state.wearingImage = action.payload
+        },
+        editBackgroundImage: (state, action) => {
+            console.log("editBackgroundImage")
+            state.backgroundImage = action.payload
         },
     },
 });
@@ -25,9 +32,17 @@ export const imageReducer = ImageSlice.reducer;
 
 
 //action
-export const { editFileData } = ImageSlice.actions;
+export const { editAvatarImage, editWearingImage, editBackgroundImage } = ImageSlice.actions;
 
 //selector
-export const useFileDataSelector = () => {
-    return useSelector((state) => state.image.image);
+export const useAvatarImageSelector = () => {
+    return useSelector((state) => state.image.avatarImage);
+}
+
+export const useWearingImageSelector = () => {
+    return useSelector((state) => state.image.wearingImage);
+}
+
+export const useBackgroundImageSelector = () => {
+    return useSelector((state) => state.image.backgroundImage);
 }
